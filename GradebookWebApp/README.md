@@ -1,15 +1,20 @@
-# Gradebook Application
+# CSE-106-Webapp
+This is our CSE 106 Project. It is a student developed web application that handles student grades. It is effectively an interactive student grade handbook.
 
-# Activate Python virtual environment on macOS or Linux
-source venv/bin/activate   
+How to run:
 
-# Activate Python virtual on Windows
-venv\Scripts\activate
+# In terminal enter the virtual enviroment
+venv\scripts\activate
 
-# CD into GradebookWebApp
+# Change your directory to the application
+cd GradebookWebApp
 
-# Run the development server
+# Run the development server via Flask
 flask run
-```
+
+Server will run on local host port 5000
+If you want to enter the admin page just type in /admin in your web browser's URL after 5000 when running
+
+Will allow you to see all the data to help get past the login page
 
 
