@@ -6,7 +6,7 @@ source venv/bin/activate
 # Activate Python virtual on Windows
 venv\Scripts\activate
 
-# CD into Gradebook-Application-Main
+# CD into GradebookWebApp
 
 # Run the development server
 flask run
