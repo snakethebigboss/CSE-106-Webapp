@@ -1,0 +1,42 @@
+:root {
+  --bg-color: #000000;
+  --accent-color: #c82718;
+  --primary-text-color: #292a2c;
+  --secondary-text-color: #61a6d4;
+  --tertiary-text-color: #becad9;
+  --quaternary-text-color: #f7fafc;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  font-family: "Source Sans Pro", Arial, Helvetica, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--primary-text-color);
+  position: relative;
+  overflow-x: hidden;
+}
+
+.content {
+  height: calc(100vh - 4rem);
+}
+
+.navbar-container {
+  height: 4rem;
+  background-color: var(--accent-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: var(--quaternary-text-color);
+}
+
+.footer-container {
+  width: inherit;
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+}

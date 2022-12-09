@@ -1,0 +1,31 @@
+{% extends "person.html" %}
+{% block title %}{{ instructor_course }}{% endblock %}
+
+{% block person_name %}{{ instructor_name }}{% endblock %}
+
+{% block inner_nav_links %} 
+    <button class="inner-nav-link active-tab">{{ instructor_course }} Gradebook</button>
+{% endblock %}
+
+{% block data_table_headings %} 
+    <th>Student</th>
+    <th>Grade</th>
+    <th>Edit</th>
+{% endblock %}
+
+{% block data_table_body %}
+    {% for student in data %}
+        <tr>
+            <td>{{ student.name }}</td>
+            <td onclick="editGrade('{{ student.grade }}')">  
+                <p class="grade-value">{{ student.grade }}</p>
+            </td>
+            <td>
+                <form action="{{ url_for('specific_course', name = instructor_name, course = instructor_course, student = student.name ) }}" method="post">
+                    <input type="text" class="editable-field" name="new_grade" autocomplete="off">
+                    <input class="edit-grade-submit" type="submit" value="Submit">
+                </form>
+            </td>
+        </tr>
+    {% endfor %}
+{% endblock %}

@@ -1,0 +1,31 @@
+{% extends "person.html" %} 
+{% block title %}Instructor{% endblock %} 
+
+{% block person_name %}{{ instructor_name }}{% endblock %}
+
+{% block inner_nav_links %}
+    <button class="inner-nav-link active-tab">Your Courses</button>
+{% endblock %}
+
+{% block data_table_headings %}
+    <th>Name</th>
+    <th>Instructor</th>
+    <th>Time</th>
+    <th>Enrollment</th>
+{% endblock %}
+
+{% block data_table_body %}
+    {% for class in data %}
+        <tr>
+            <td>
+                <a href="{{ url_for('specific_course', name = class.instructor, course = class.name) }}">
+                    {{ class.name }}
+                </a>
+            </td>
+            <td>{{ class.instructor }}</td>
+            <td>{{ class.time }}</td>
+            <td>{{ class.enrollment }}</td>
+        </tr>
+    {% endfor %}
+{% endblock %}
+
